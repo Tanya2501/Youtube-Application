@@ -1,0 +1,20 @@
+{
+    "extends": "airbnb-base",
+    "plugins": [
+        "import"
+    ],
+    "rules": {
+         "indent": ["error", 4],
+         "no-param-reassign": [2, {"props": false}],
+         "func-names": ["error", "never"],
+         "linebreak-style": ["error", "windows"]
+     },
+    "globals": {
+    "document": true,
+    "window": true,
+    "XMLHttpRequest": true,
+    "XDomainRequest": true,
+    "alert": true
+  }
+
+}

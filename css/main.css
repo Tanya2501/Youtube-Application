@@ -1,0 +1,170 @@
+@keyframes slide-in-from-left {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes slide-out-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes slide-in-from-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes slide-out-right {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+
+    min-height: 100%;
+    margin: 0;
+
+    color: #ccc8d7;
+    background-color: #130b28;
+}
+
+#search-results {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 34em;
+
+    text-align: center;
+}
+
+header {
+    max-width: 70%;
+    margin: 2em;
+
+    border-radius: 5px;
+    background-color: #ccc8d7;
+}
+
+header input {
+    font-size: 16px;
+
+    width: 50%;
+    height: 2.5em;
+    margin: .8em;
+    padding: 5px 10px;
+
+    color: #fff;
+    border: #1f1833 2px solid;
+    border-radius: 15px;
+    background-color: #130b28;
+}
+
+footer {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 15px;
+    background-color: #ccc8d7;
+}
+
+#divForResult {
+    position: relative;
+
+    display: none;
+
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 30em;
+    margin: 20px;
+    padding: 1em;
+
+    text-align: center;
+
+    background-color: #000;
+    box-shadow: 0 0 2em black;
+    border-radius: 10px;
+}
+
+.withTransformAppearRight {
+    animation: slide-in-from-right .5s forwards;
+}
+
+.withTransformAppearOutRight {
+    animation: slide-out-right .5s forwards;
+}
+
+.withTransformAppearLeft {
+    animation: slide-in-from-left .5s forwards;
+}
+
+.withTransformAppearOutLeft {
+    animation: slide-out-left .5s forwards;
+}
+
+#search-results > div a {
+    font-size: 1em;
+
+    min-height: 20vh;
+
+    text-decoration: none;
+
+    color: #ccc8d7;
+}
+
+#search-results > div p {
+    margin-bottom: 10px;
+}
+
+#search-results > #divForResult div:not(:last-child) {
+    min-height: 60vh;
+}
+
+#search-results > #divForResult div:first-child {
+    min-height: 4em;
+    max-height: 4em;
+}
+
+#divInfo {
+    position: absolute;
+    top: 18em;
+
+    overflow: hidden;
+
+    width: 90%;
+    min-height: 10vh;
+}
+
+footer a {
+    font-size: .8em;
+
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    padding: 3px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border-radius: 15px;
+    background-color: #130b28;
+}
+
+.activePage {
+    background-color: #6e5b9e;
+}
